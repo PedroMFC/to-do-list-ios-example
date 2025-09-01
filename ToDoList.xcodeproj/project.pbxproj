@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C1EB61C32E61F269001B49AA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C1EB61C22E61F269001B49AA /* FirebaseAuth */; };
+		C1EB61C52E61F269001B49AA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C1EB61C42E61F269001B49AA /* FirebaseFirestore */; };
+		C1EB61C72E61F269001B49AA /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C1EB61C62E61F269001B49AA /* FirebaseFirestoreCombine-Community */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C1EB61A32E61EEAF001B49AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1EB61C72E61F269001B49AA /* FirebaseFirestoreCombine-Community in Frameworks */,
+				C1EB61C32E61F269001B49AA /* FirebaseAuth in Frameworks */,
+				C1EB61C52E61F269001B49AA /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,9 @@
 			);
 			name = ToDoList;
 			packageProductDependencies = (
+				C1EB61C22E61F269001B49AA /* FirebaseAuth */,
+				C1EB61C42E61F269001B49AA /* FirebaseFirestore */,
+				C1EB61C62E61F269001B49AA /* FirebaseFirestoreCombine-Community */,
 			);
 			productName = ToDoList;
 			productReference = C1EB61952E61EEAE001B49AA /* ToDoList.app */;
@@ -195,6 +207,9 @@
 			);
 			mainGroup = C1EB618C2E61EEAE001B49AA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C1EB61C12E61F269001B49AA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1EB61962E61EEAE001B49AA /* Products */;
 			projectDirPath = "";
@@ -397,16 +412,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "To Do List";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LIBTOOLFLAGS = "\"-WLinkingC true\" \"-XCBuildForPre true\" \"-XCExpApple true\"";
 				PRODUCT_BUNDLE_IDENTIFIER = pedromfc.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -424,16 +440,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "To Do List";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LIBTOOLFLAGS = "\"-WLinkingC true\" \"-XCBuildForPre true\" \"-XCExpApple true\"";
 				PRODUCT_BUNDLE_IDENTIFIER = pedromfc.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -550,6 +567,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1EB61C12E61F269001B49AA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1EB61C22E61F269001B49AA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1EB61C12E61F269001B49AA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C1EB61C42E61F269001B49AA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1EB61C12E61F269001B49AA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C1EB61C62E61F269001B49AA /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1EB61C12E61F269001B49AA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1EB618D2E61EEAE001B49AA /* Project object */;
 }
